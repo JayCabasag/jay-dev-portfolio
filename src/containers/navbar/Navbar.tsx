@@ -14,7 +14,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className='bg-white h-16 shadow-xs w-full flex justify-center sticky top-0 shadow-sm'>
+    <nav className='bg-white h-16 shadow-xs w-full flex justify-center sticky top-0 shadow-sm z-20'>
       <div className='container flex justify-between items-center px-4 md:px-0'>
         <div className='flex gap-4 md:gap-16'>
         <h1 className='leading-5 text-lg font-bold flex items-center'>JAY.DEV</h1>
