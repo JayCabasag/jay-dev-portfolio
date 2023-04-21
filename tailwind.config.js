@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       height: {
         'screen-64': 'calc(100vh - 64px)',
+        'screen-128': 'calc(100vh - 128px)',
         'screen-3/4': 'calc(100vh - 25%)',
       },
       fontFamily: {

@@ -22,7 +22,7 @@ export default function BlogsPage({ blogs } : BlogPageProps) {
         <div className='w-full mt-4'>
         <h1 className='text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold md:px-0 px-2'>Topics</h1>
         </div>
-        <div className='flex gap-4 container flex-wrap nowrap'>
+        <div className='flex container flex-wrap nowrap '>
           {blogs.map((blog: Blog, index: number) => {
             return <BlogCard blog={blog} key={index}/>
           })}

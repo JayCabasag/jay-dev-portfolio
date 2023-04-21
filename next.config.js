@@ -18,6 +18,8 @@ const nextConfig = {
     STORAGE_BUCKET: process.STORAGE_BUCKET,
     MESSAGING_SENDER_ID: process.MESSAGING_SENDER_ID,
     APP_ID: process.APP_ID,
+    MAIL_EMAIL: process.env.MAIL_EMAIL,
+    MAIL_PASSWORD: process.env.MAIL_PASSWORD
   }
 }
 

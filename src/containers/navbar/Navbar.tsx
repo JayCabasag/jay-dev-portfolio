@@ -49,7 +49,11 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <button className='leading-5 text-sm font-bold flex items-center h-10 px-4 uppercase hover:bg-red-600 bg-red-500 text-white rounded'>Contact me</button>
+        <Link href='/contact' passHref legacyBehavior>
+          <a>
+            <button className='leading-5 text-sm font-bold flex items-center h-10 px-4 uppercase hover:bg-red-600 bg-red-500 text-white rounded'>Contact me</button>
+          </a>
+        </Link>
       </div>
     </nav>
   )
