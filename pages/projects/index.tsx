@@ -3,7 +3,7 @@ import { ProjectCard } from '@/src/components'
 import { ProjectSection } from '@/src/containers/projects'
 import { Project } from '@/src/utils/types'
 import { getApps, initializeApp } from 'firebase/app'
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { collection, getDocs, getFirestore, orderBy, query } from 'firebase/firestore'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
@@ -28,7 +28,9 @@ export const getStaticProps = async  () => {
   const firestoreDb = !!getApps().length
   ? db
   : getFirestore(initializeApp(firebaseConfig));
-  const res = await getDocs(collection(firestoreDb, "projects"))
+  const projectsRef = collection(firestoreDb, "projects");
+  const qry = query(projectsRef, orderBy("rank", "asc"));
+  const res = await getDocs(qry);
   const projects = await res.docs.map(doc => doc.data())
   return {
     props: {

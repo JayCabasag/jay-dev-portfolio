@@ -20,7 +20,7 @@ export default function WorksSections({ projects }: WorkSectionsProps) {
             <h1 className="text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold px-4 md:px-0">Here are some of my works</h1>
             {
               hasMoreThanFourProjects && (
-                <Link href='#' passHref legacyBehavior>
+                <Link href='/projects' passHref legacyBehavior>
                 <a><p className='text-md text-red-500 hover:underline ml-4 font-mono font-bold h-full items-center cursor-pointer transition-colors'>View all</p></a>
               </Link>
               )
