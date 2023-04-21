@@ -28,7 +28,7 @@ function ProjectCard({ project }: ProjectCardProps ) {
                       <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path>
                       </svg>
-                        <div role="tooltip" className={`${showInfoPopover ? '' : 'invisible opacity-0'} absolute z-10 w-72 -ml-72 md:ml-0 inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400`}>
+                        <div role="tooltip" className={`${showInfoPopover ? '' : 'invisible opacity-0'} absolute z-10 w-72 -ml-64 inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400`}>
                           <div className="p-3 space-y-2">
                           <p><strong>Note:</strong> {project.note}</p>
                           </div>
@@ -37,7 +37,7 @@ function ProjectCard({ project }: ProjectCardProps ) {
                   </div>
                 </div>
                 <a href={project.url} target='_blank'><h2 className="text-lg text-gray-900 font-medium title-font mb-4 hover:text-red-400 cursor-pointer transition-colors">{project.title}</h2></a>
-                <p className="leading-relaxed text-base">{project.description}</p>
+                <p className="leading-relaxed text-base line-clamp-3 ">{project.description}</p>
               </div>
             </div>
   )

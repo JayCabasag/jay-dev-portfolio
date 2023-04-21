@@ -79,10 +79,12 @@ export async function getStaticPaths() {
         props: {
           blog
         },
+        revalidate: 60
       }
     } else {
       return {
         notFound: true,
+        revalidate: 60
       }
     }
   }
