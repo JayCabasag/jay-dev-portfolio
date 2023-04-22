@@ -1,11 +1,12 @@
 import React from 'react'
 import { firebaseConfig } from '@/firebase/config';
 import { db } from '@/firebase/config';
-import { BlogCard } from '@/src/containers/blogs'
+import { BlogCard } from '@/src/components/blogs';
 import { getApps, initializeApp } from 'firebase/app';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { Blog } from '@/src/utils/types';
 import Head from 'next/head';
+import { BlogSection } from '@/src/containers/blogs';
 
 interface BlogPageProps {
   blogs: Blog[]
@@ -18,16 +19,7 @@ export default function BlogsPage({ blogs } : BlogPageProps) {
         <title>Jay.Dev</title>
         <meta name="description" content="A Jay Cabasag's portfolio site" />
       </Head>
-      <div className='container '>
-        <div className='w-full mt-4'>
-        <h1 className='text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold md:px-0 px-2'>Topics</h1>
-        </div>
-        <div className='flex container flex-wrap nowrap '>
-          {blogs.map((blog: Blog, index: number) => {
-            return <BlogCard blog={blog} key={index}/>
-          })}
-        </div>
-      </div>
+      <BlogSection blogs={blogs}/>
     </main>
   )
 }

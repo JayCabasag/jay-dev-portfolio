@@ -1,2 +1,3 @@
-import BlogCard from "./BlogCard";
-export { BlogCard }
+import BlogSection from "./BlogSection";
+
+export { BlogSection }

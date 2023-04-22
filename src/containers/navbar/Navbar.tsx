@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
@@ -5,19 +6,28 @@ import React, { useState } from 'react'
 export default function Navbar() {
   const [expandMobileMenu, setExpandMobileMenu] = useState<boolean>(false)
   const router = useRouter()
-  const isRootPage = router.asPath === '/'
-  const isProjectsPage = router.asPath === '/projects'
-  const isBlogsPage = router.asPath === '/blogs'
+  const isRootPage = router.pathname === '/'
+  const isProjectsPage = router.pathname === '/projects'
+  const isBlogsPage = router.pathname === '/blogs'
 
   const handleToggleMobileMenu = () => {
     setExpandMobileMenu(!expandMobileMenu)
   }
 
+
   return (
     <nav className='bg-white h-16 shadow-xs w-full flex justify-center sticky top-0 shadow-sm z-20'>
       <div className='container flex justify-between items-center px-4 md:px-0'>
         <div className='flex gap-4 md:gap-16'>
-        <h1 className='leading-5 text-lg font-bold flex items-center'>JAY.DEV</h1>
+        <div className='flex gap-2 items-center justify-center'>
+          <Image
+            src='/jay-dev.png'
+            height={30}
+            width={30}
+            alt='Logo'
+          />
+          <h1 className='hidden leading-5 text-lg font-extrabold md:flex items-center text-slate-950'>JAY.DEV</h1>
+        </div>
           <button className='w-7 h-7 flex md:hidden' onClick={handleToggleMobileMenu}>
             <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path>

@@ -1,5 +1,5 @@
 import { db, firebaseConfig } from '@/firebase/config'
-import { ProjectCard } from '@/src/components'
+import { ProjectCard } from '@/src/components/projects'
 import { ProjectSection } from '@/src/containers/projects'
 import { Project } from '@/src/utils/types'
 import { getApps, initializeApp } from 'firebase/app'
@@ -14,7 +14,7 @@ interface ProjectPageProps {
 
 export default function ProjectsPage({ projects }: ProjectPageProps) {
   return (
-    <main className='h-auto min-h-screen md:h-screen-64 flex justify-center'>
+    <main className='h-auto min-h-screen md:min-h-screen-64 flex justify-center'>
       <Head>
         <title>Jay.Dev</title>
         <meta name="description" content="A Jay Cabasag's portfolio site" />
