@@ -7,8 +7,8 @@ export default function Navbar() {
   const [expandMobileMenu, setExpandMobileMenu] = useState<boolean>(false)
   const router = useRouter()
   const isRootPage = router.pathname === '/'
-  const isProjectsPage = router.pathname === '/projects'
-  const isBlogsPage = router.pathname === '/blogs'
+  const isProjectsPage = router.pathname.startsWith('/projects')
+  const isBlogsPage = router.pathname.startsWith('/blogs')
 
   const handleToggleMobileMenu = () => {
     setExpandMobileMenu(!expandMobileMenu)

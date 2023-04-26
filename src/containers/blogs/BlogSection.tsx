@@ -14,7 +14,7 @@ export default function BlogSection({ blogs } : BlogSectionProps) {
         </div>
         <div className='flex container flex-wrap nowrap gap-4 '>
           {blogs.map((blog: Blog, index: number) => {
-            return <BlogCard blog={blog} key={index}/>
+            return <BlogCard blog={blog} keyProp={index} key={index}/>
           })}
         </div>
       </div>

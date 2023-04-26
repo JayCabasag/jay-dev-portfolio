@@ -1,13 +1,14 @@
 import Image from 'next/image'
-import React from 'react'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Project } from '@/src/utils/types'
 
 interface ProjectCardProps {
   project: Project
+  keyProp: number
 }
 
-function ProjectCard({ project }: ProjectCardProps ) {
+function ProjectCard({ project, keyProp }: ProjectCardProps ) {
   const [showInfoPopover, setShowInfoPopover] = useState<boolean>(false)
   const handlePopoverOnMouseEnter = (event: React.MouseEvent<HTMLDivElement>) => {
     setShowInfoPopover(true)
@@ -16,7 +17,13 @@ function ProjectCard({ project }: ProjectCardProps ) {
     setShowInfoPopover(false)
   }
   return (
-    <div className="xl:w-1/4 md:w-1/2 md:p-4">
+    <motion.div
+      initial={{ x: 100, opacity: 0}}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ delay: keyProp * .2 }}
+      viewport={{ once: true }}
+      className="xl:w-1/4 md:w-1/2 md:p-4"
+    >
               <div className="bg-white hover:shadow-xl shadow-md p-12 md:p-6 rounded-lg w-full">
                 <a href={project.url} target='_blank'>
                     <Image className="h-40 rounded w-full object-cover object-center mb-6 cursor-pointer" src={project.image} alt="content" height={500} width={700} />
@@ -39,7 +46,7 @@ function ProjectCard({ project }: ProjectCardProps ) {
                 <a href={project.url} target='_blank'><h2 className="text-lg text-gray-900 font-medium title-font mb-4 hover:text-red-400 cursor-pointer transition-colors">{project.title}</h2></a>
                 <p className="leading-relaxed text-base line-clamp-3 ">{project.description}</p>
               </div>
-            </div>
+            </motion.div>
   )
 }
 

@@ -1,6 +1,6 @@
 import { ProjectCard } from '@/src/components/projects'
 import { Project } from '@/src/utils/types'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -16,7 +16,21 @@ export default function WorksSections({ projects }: WorkSectionsProps) {
       <div className='w-full flex items-center justify-center'><h1 className='text-2xl px-4 md:px-0 md:text-5xl font-mono font-extrabold'>Projects</h1> </div>                          
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20">
-        <div className="lg:w-1/2 w-full mb-6 lg:mb-0 flex items-center">
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 100
+          }}
+          transition={{
+            delay: .1
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0
+          }}
+          viewport={{ once: true }}
+          className="lg:w-1/2 w-full mb-6 lg:mb-0 flex items-center"
+        >
             <h1 className="text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold px-4 md:px-0">Here are some of my works</h1>
             {
               hasMoreThanFourProjects && (
@@ -25,12 +39,12 @@ export default function WorksSections({ projects }: WorkSectionsProps) {
               </Link>
               )
             }
-        </div>
+        </motion.div>
         <p className="lg:w-1/2 w-full leading-relaxed text-gray-500"></p>
         </div>
         <div className="container flex flex-wrap -m-4">
         {projectList.map((project: Project, index: number) => {
-          return <ProjectCard  project={project} key={index}/>
+          return <ProjectCard  project={project} key={index} keyProp={index}/>
         })}
         </div>
         </div>

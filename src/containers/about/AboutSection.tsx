@@ -15,16 +15,16 @@ export default function AboutSection() {
             className='text-xl text-red-500 font-mono cursor-pointer hover:underline transition-all'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: .2 }}
+            transition={{ delay: .1 }}
             viewport={{ once: true }}
           >
             Introduction
           </motion.h1>
           <motion.h1
             className='text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold md:px-0'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: .5 }}
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{  x: 0, opacity: 1 }}
+            transition={{ delay: .1 }}
             viewport={{ once: true }}
           >
             Hi there, 
@@ -32,7 +32,7 @@ export default function AboutSection() {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: .7 }}
+            transition={{ delay: .5 }}
             viewport={{ once: true }}
           >
             I&apos;m <span className='text-red-500 cursor-pointer hover:underline'>Jay A. Cabasag</span>, a front-end developer with a passion for creating beautiful and responsive websites. With {monthsDifference} months of experience under my belt, I am excited to share my portfolio with you to know me better and showcase some of my best work.
@@ -46,7 +46,7 @@ export default function AboutSection() {
           className='h-[450px] w-full md:w-1/2 flex justify-center flex-col p-4 md:p-0 items-center'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: .3 }}
+          transition={{ delay: .1 }}
           viewport={{ once: true }}
         >
           <Image
@@ -59,7 +59,7 @@ export default function AboutSection() {
             className='font-extrabold text-5xl text-slate-950'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: .5 }}
+            transition={{ delay: .3 }}
             viewport={{ once: true }}
           >
             JAY.DEV
@@ -70,16 +70,16 @@ export default function AboutSection() {
           className='text-xl text-red-500 font-mono cursor-pointer hover:underline transition-all'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: .2 }}
+          transition={{ delay: .1 }}
           viewport={{ once: true }}
         >
           Technical skills
         </motion.h1>
           <motion.h1
             className='text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold md:px-0'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: .5 }}
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: .3 }}
             viewport={{ once: true }}
           >
             I am proficient in a variety of technologies,
@@ -87,7 +87,7 @@ export default function AboutSection() {
           <motion.p
            initial={{ opacity: 0 }}
            whileInView={{ opacity: 1 }}
-           transition={{ delay: .7 }}
+           transition={{ delay: .5 }}
            viewport={{ once: true }}
           >including <span className='text-red-500 cursor-pointer hover:underline'>HTML</span> , <span className='text-red-500 cursor-pointer hover:underline'>CSS</span>, and <span className='text-red-500 cursor-pointer hover:underline'>JavaScript/TypeScript</span>. Additionally, I am also knowledgeable about different technologies like <span className='text-red-500 cursor-pointer hover:underline'>React js</span>, <span className='text-red-500 cursor-pointer hover:underline'>Next js</span>,<span className='text-red-500 cursor-pointer hover:underline'>Node js</span>, <span className='text-red-500 cursor-pointer hover:underline'>Express js</span>, <span className='text-red-500 cursor-pointer hover:underline'>Java Spring Boot</span> and <span className='text-red-500 cursor-pointer hover:underline'>GoLang</span> which I often use when working on my side projects.For databases, I use <span className='text-red-500 cursor-pointer hover:underline'>MySQL</span>, <span className='text-red-500 cursor-pointer hover:underline'>PostgreSQL</span>, and <span className='text-red-500 cursor-pointer hover:underline'>Firebase</span>. And I also use <span className='text-red-500 cursor-pointer hover:underline'>Design Systems</span> like <span className='text-red-500 cursor-pointer hover:underline'>MUI</span>, <span className='text-red-500 cursor-pointer hover:underline'>Tailwind CSS</span> and <span className='text-red-500 cursor-pointer hover:underline'>SASS</span>
           </motion.p>
@@ -99,16 +99,16 @@ export default function AboutSection() {
             className='text-xl text-red-500 font-mono cursor-pointer hover:underline transition-all'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: .2 }}
+            transition={{ delay: .1 }}
             viewport={{ once: true }}
           >
             Education
           </motion.h1>
           <motion.h1
             className='text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold md:px-0d'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: .5 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: .3 }}
             viewport={{ once: true }}
           >
             Bachelors Degree in Computer Science
@@ -116,7 +116,7 @@ export default function AboutSection() {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: .7 }}
+            transition={{ delay: .5 }}
             viewport={{ once: true }}
           >
             I earned a degree in Computer Science from <span className='text-red-500 cursor-pointer hover:underline'>Taguig City University</span> and have continued to stay up-to-date on the latest front-end development trends and technologies through self-directed learning and attending industry events and workshops.
@@ -126,7 +126,7 @@ export default function AboutSection() {
           className='h-[450px] w-full md:w-1/2 flex justify-center flex-col p-4 md:p-0 items-center'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: .7 }}
+          transition={{ delay: .4 }}
           viewport={{ once: true }}
         >
           <Image
@@ -153,8 +153,8 @@ export default function AboutSection() {
         </motion.h1>
           <motion.h1
             className='text-lg sm:text-3xl md:text-4xl title-font mb-2 text-gray-900 font-mono font-bold md:px-0'
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ x:100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: .5 }}
             viewport={{ once: true }}  
           >
