@@ -2,6 +2,7 @@ import moment from 'moment'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion"
+import TechnologySlider from '@/src/components/about/TechnologySlider'
 
 export default function AboutSection() {
   const dateToCompare = moment('12-09-2022', 'DD-MM-YYYY')
@@ -39,16 +40,6 @@ export default function AboutSection() {
           </motion.p>
         </div>
         <div className='h-[450px] w-full md:w-1/2 flex justify-center flex-col p-4 md:p-0 items-center'>
-        </div>
-      </div>
-      <div className='flex flex-col md:flex-row md:gap-24'>
-        <motion.div
-          className='h-[450px] w-full md:w-1/2 flex justify-center flex-col p-4 md:p-0 items-center'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: .1 }}
-          viewport={{ once: true }}
-        >
           <Image
             src='/jay-dev.png'
             height={150}
@@ -64,6 +55,18 @@ export default function AboutSection() {
           >
             JAY.DEV
           </motion.h1>
+        </div>
+      </div>
+      <div className='flex flex-col md:flex-row md:gap-24'>
+        <motion.div
+          className='h-[450px] w-full md:w-1/2 flex justify-center flex-col p-4 md:p-0 items-center'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: .1 }}
+          viewport={{ once: true }}
+        >
+        <TechnologySlider />
+         
         </motion.div>
         <div className='h-[450px] w-full md:w-1/2 flex justify-center flex-col p-4 md:p-0'>
         <motion.h1

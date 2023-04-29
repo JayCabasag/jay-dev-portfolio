@@ -14,7 +14,7 @@ interface BlogPageProps {
 
 export default function BlogsPage({ blogs } : BlogPageProps) {
   return (
-    <main className='h-auto min-h-screen md:h-screen-64 flex justify-center'>
+    <main className='h-auto min-h-screen md:h-screen-64 flex justify-center overflow-x-hidden'>
       <Head>
         <title>Jay.Dev</title>
         <meta name="description" content="A Jay Cabasag's portfolio site" />

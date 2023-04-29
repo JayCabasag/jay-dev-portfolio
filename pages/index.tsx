@@ -22,7 +22,7 @@ export default function Home({ projects } : HomeProps) {
   }
 
   return (
-    <main className='h-auto flex justify-center items-center flex-col gap-24'>
+    <main className='h-auto flex justify-center items-center flex-col gap-24 overflow-x-hidden'>
       <Head>
         <title>Jay.Dev</title>
         <meta name="description" content="A Jay Cabasag's portfolio site" />

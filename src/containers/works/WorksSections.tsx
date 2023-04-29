@@ -12,10 +12,12 @@ export default function WorksSections({ projects }: WorkSectionsProps) {
   const [projectList, setProjectList] = useState<Project[]>(topFourProjects)
   const hasMoreThanFourProjects = projects.length > 4
   return (
-    <div className="flex flex-col container">
-      <div className='w-full flex items-center justify-center'><h1 className='text-2xl px-4 md:px-0 md:text-5xl font-mono font-extrabold'>Projects</h1> </div>                          
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap w-full mb-20">
+    <div className="flex flex-col container items-center justify-center mb-4">
+      <div className='w-full flex items-center justify-center'>
+        <h1 className='text-2xl px-4 md:px-0 md:text-5xl font-mono font-extrabold'>Projects</h1>
+      </div>                          
+      <div className="container px-4 md:py-16 mx-auto">
+        <div className="flex flex-wrap w-full">
         <motion.div
           initial={{
             opacity: 0,
@@ -42,7 +44,7 @@ export default function WorksSections({ projects }: WorkSectionsProps) {
         </motion.div>
         <p className="lg:w-1/2 w-full leading-relaxed text-gray-500"></p>
         </div>
-        <div className="container flex flex-wrap -m-4">
+        <div className="container flex flex-wrap w-full gap-4 md:gap-0">
         {projectList.map((project: Project, index: number) => {
           return <ProjectCard  project={project} key={index} keyProp={index}/>
         })}

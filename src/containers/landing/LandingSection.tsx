@@ -29,9 +29,9 @@ export default function LandingSection({ handleScrollToAbout } : LandingSectionP
          transition={{ delay: .5 }}
         >
         <Image 
-          src='/assets/main-img.png'
-          height={750}
-          width={750}
+          src='/assets/main-img2.webp'
+          height={500}
+          width={500}
           alt='main'
         />
       </motion.div>
