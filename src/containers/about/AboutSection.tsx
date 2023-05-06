@@ -122,7 +122,7 @@ export default function AboutSection() {
             transition={{ delay: .5 }}
             viewport={{ once: true }}
           >
-            I earned a degree in Computer Science from <span className='text-red-500 cursor-pointer hover:underline'>Taguig City University</span> and have continued to stay up-to-date on the latest front-end development trends and technologies through self-directed learning and attending industry events and workshops.
+            I earned a degree in Computer Science and have continued to stay up-to-date on the latest front-end development trends and technologies through self-directed learning and attending industry events and workshops.
           </motion.p>
         </div>    
         <motion.div
